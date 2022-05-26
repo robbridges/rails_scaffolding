@@ -3,4 +3,8 @@
     <%= @page.body %>
 </p>
 
-<%= link_to 'Edit', edit_page_path(@page) %>
+
+<div>
+    <%= link_to 'Edit', edit_page_path(@page) %>
+    <%= button_to 'Delete', @page, method: :delete %>
+</div>
