@@ -15,4 +15,8 @@ class PagesController < ApplicationController
         @page.save
         redirect_to @page
     end
+    def edit
+        @page = Page.find(params[:id])
+        
+    end
 end
