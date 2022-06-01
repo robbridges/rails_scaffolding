@@ -5,12 +5,11 @@
 <div id="comments">
   <h1>Comments</h1>
   <!-- The `comments` method returns an array-like collection, so we can call `each` on it: -->
-  <% @post.comments.each do |comment| %>
-    <div>
-      <strong><%= comment.name %> says:</strong>
-      <%= comment.content %>
-    </div>
-  <% end %>
+  
+    <%= render @post.comments %>
+    <h2>Add a comment </h2>
+    <%= render partial: "comments/form", locals: {comment: @post.comments.new} %>
+  
 </div>
 <br>
 <div>
